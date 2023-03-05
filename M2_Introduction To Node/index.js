@@ -6,6 +6,7 @@ console.log();
 
 const server = http.createServer((req, res) => {
     res.end("thats my server :(")
+    console.log(req.url);
 })
 const port = 3210;
 server.listen(port, console.log(`server is running port - ${port}`))
