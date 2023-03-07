@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["express-rate-limit", "virtual:21958a8febc987af383c3d1b26d168043e8c048b16424e07452e300446211d604cc70b1a2f8288fcbb7e4a31310dbe48b1275c39f855c50cb9525f1351b3ba10#npm:6.7.0"],\
             ["jsonwebtoken", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -46,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["dotenv", "npm:16.0.3"],\
             ["express", "npm:4.18.2"],\
+            ["express-rate-limit", "virtual:21958a8febc987af383c3d1b26d168043e8c048b16424e07452e300446211d604cc70b1a2f8288fcbb7e4a31310dbe48b1275c39f855c50cb9525f1351b3ba10#npm:6.7.0"],\
             ["jsonwebtoken", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
@@ -310,6 +312,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],\
             ["utils-merge", "npm:1.0.1"],\
             ["vary", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["express-rate-limit", [\
+        ["npm:6.7.0", {\
+          "packageLocation": "./.yarn/cache/express-rate-limit-npm-6.7.0-e847771089-7bd3f298b2.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "npm:6.7.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:21958a8febc987af383c3d1b26d168043e8c048b16424e07452e300446211d604cc70b1a2f8288fcbb7e4a31310dbe48b1275c39f855c50cb9525f1351b3ba10#npm:6.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/express-rate-limit-virtual-31043efa87/0/cache/express-rate-limit-npm-6.7.0-e847771089-7bd3f298b2.zip/node_modules/express-rate-limit/",\
+          "packageDependencies": [\
+            ["express-rate-limit", "virtual:21958a8febc987af383c3d1b26d168043e8c048b16424e07452e300446211d604cc70b1a2f8288fcbb7e4a31310dbe48b1275c39f855c50cb9525f1351b3ba10#npm:6.7.0"],\
+            ["@types/express", null],\
+            ["express", "npm:4.18.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/express",\
+            "express"\
           ],\
           "linkType": "HARD"\
         }]\
