@@ -11,6 +11,15 @@ app.use(express.json());
 // Routes
 app.use('/api/v1/users', userApi)
 
+
 // Server
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+// Error
+process.on("unhandledRejection", (error) => {
+    console.log(error.name, error.message);
+    app.close(() => {
+        process.exit(1);
+    })
+})
