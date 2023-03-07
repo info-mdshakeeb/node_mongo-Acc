@@ -34,3 +34,16 @@ module.exports.getRandomUser = (req, res) => {
     const randomUser = users.sort(() => Math.random() - 0.5);
     res.send(randomUser[0]);
 }
+module.exports.getAllUsers = (req, res) => {
+    const limit = req.query.limit;
+    if (limit) {
+        const limitUsers = users.slice(0, limit);
+        res.send(limitUsers);
+    }
+    // Get all users
+    res.send(users);
+}
+module.exports.getLimitUsers = (req, res) => {
+
+
+}

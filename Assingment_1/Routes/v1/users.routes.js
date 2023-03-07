@@ -3,10 +3,9 @@ const usersRoute = require('../../controller/user.controller');
 const router = express.Router();
 // Importing the controller
 
-router.route('/')
+router.route('/random')
     .get(usersRoute.getRandomUser)
-    .post()
-    .put()
-    .delete()
 
+router.route('/all')
+    .get(usersRoute.getAllUsers)
 module.exports = router;

@@ -9,13 +9,13 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/v1/users', userApi)
+app.use('/api/v1/users', userApi);
 
 
+//for all other route
+app.all("*", (req, res) => { res.send("no route found") })
 // Server
-
 app.listen(port, () => console.log(`Server running on port ${port}`));
-
 // Error
 process.on("unhandledRejection", (error) => {
     console.log(error.name, error.message);
