@@ -8,6 +8,7 @@ const userApi = require('./Routes/v1/users.routes');
 app.use(cors());
 app.use(express.json());
 
+
 // Routes
 app.use('/api/v1/users', userApi);
 
