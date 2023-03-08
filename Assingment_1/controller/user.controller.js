@@ -53,6 +53,30 @@ module.exports.updateUser = (req, res) => {
         res.send({ message: "User updated" });
     }
 }
+module.exports.multipleUserUpdate = (req, res) => {
+    const user = req.body;
+    const { id, gender, name, contact, address, photoUrl } = user;
+    if (!id || !gender || !name || !contact || !address || !photoUrl) {
+        res.status(400).send({ message: "Please provide all the required fields" });
+    } else {
+        for (const _id of id) {
+            const user = users.find(u => u.id === _id);
+            if (!user) {
+                return res.status(404).json({ message: `User with ID ${id} not found` });
+            }
+            user.id = id;
+            user.gender = gender;
+            user.name = name;
+            user.contact = contact;
+            user.address = address;
+            user.photoUrl = photoUrl;
+        }
+        // Save updated user data to JSON file
+        fs.writeFileSync('users.json', JSON.stringify(users, null, 2));
+        return res.status(200).json({ message: 'Users updated successfully' });
+    }
+}
+
 // Delete the user by id
 module.exports.deleteUser = (req, res) => {
     const { id } = req.params;

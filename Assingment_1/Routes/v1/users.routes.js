@@ -15,6 +15,9 @@ router.route("/save")
 router.route('/update/:id')
     .patch(usersRoute.updateUser)
 
+router.route('/bulk-update')
+    .patch(usersRoute.multipleUserUpdate)
+
 router.route('/delete/:id')
     .delete(usersRoute.deleteUser)
 
