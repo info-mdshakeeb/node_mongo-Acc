@@ -35,3 +35,21 @@ module.exports.saveUser = (req, res) => {
         res.send({ message: "User saved" });
     }
 }
+// Update the user by id
+module.exports.updateUser = (req, res) => {
+    const { id } = req.params;
+    const update = req.body;
+    // const user = req.body;
+    const getUser = users.find((user) => user.id == id);
+    console.log('getUser', getUser);
+    if (!getUser) {
+        res.status(400).send({ message: "User not found" })
+    } else {
+        const index = users.indexOf(getUser);
+        users[index] = { ...getUser, ...update };
+        // Save the data to the json file
+        const data = JSON.stringify({ users }, null, 2);
+        fs.writeFileSync('./public/users.json', data);
+        res.send({ message: "User updated" });
+    }
+}

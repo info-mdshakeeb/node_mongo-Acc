@@ -11,4 +11,7 @@ router.route('/all')
 
 router.route("/save")
     .post(usersRoute.saveUser)
+
+router.route('/update/:id')
+    .patch(usersRoute.updateUser)
 module.exports = router;
