@@ -47,6 +47,18 @@
         "country": "Brazil"
       },
       "photoUrl": "https://randomuser.me/api/portraits/women/4.jpg"
+    },
+    {
+      "id": 8,
+      "gender": "male",
+      "name": "Bo00b",
+      "contact": {
+        "phone": "345-678-9012"
+      },
+      "address": {
+        "country": "Mexico"
+      },
+      "photoUrl": "https://randomuser.me/api/portraits/men/3.jpg"
     }
   ]
 }

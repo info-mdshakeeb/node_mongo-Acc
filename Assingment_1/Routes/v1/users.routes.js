@@ -8,4 +8,7 @@ router.route('/random')
 
 router.route('/all')
     .get(usersRoute.getAllUsers)
+
+router.route("/save")
+    .post(usersRoute.saveUser)
 module.exports = router;
