@@ -14,4 +14,8 @@ router.route("/save")
 
 router.route('/update/:id')
     .patch(usersRoute.updateUser)
+
+router.route('/delete/:id')
+    .delete(usersRoute.deleteUser)
+
 module.exports = router;

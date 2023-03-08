@@ -25,18 +25,6 @@
       "photoUrl": "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
-      "id": 3,
-      "gender": "male",
-      "name": "Bob",
-      "contact": {
-        "phone": "345-678-9012"
-      },
-      "address": {
-        "country": "Mexico"
-      },
-      "photoUrl": "https://randomuser.me/api/portraits/men/3.jpg"
-    },
-    {
       "id": 4,
       "gender": "female",
       "name": "Mary",

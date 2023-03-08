@@ -53,3 +53,18 @@ module.exports.updateUser = (req, res) => {
         res.send({ message: "User updated" });
     }
 }
+// Delete the user by id
+module.exports.deleteUser = (req, res) => {
+    const { id } = req.params;
+    const getUser = users.find((user) => user.id == id);
+    if (!getUser) {
+        res.status(400).send({ message: "User not found" })
+    } else {
+        const remainUser = users.filter((user) => user.id != id);
+        // Save the data to the json file
+        const data = JSON.stringify({ users: remainUser }, null, 2);
+        fs.writeFileSync('./public/users.json', data);
+        res.send({ message: "User deleted" });
+
+    }
+}
