@@ -12,7 +12,6 @@ app.use(express.json());
 // Routes
 app.use('/api/v1/user', userApi);
 
-
 //for all other route
 app.all("*", (req, res) => { res.send("no route found") })
 // Server
