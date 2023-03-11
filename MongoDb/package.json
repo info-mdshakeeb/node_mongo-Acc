@@ -1,12 +1,15 @@
 {
-  "name": "MongoDb",
+  "name": "mongodb",
   "packageManager": "yarn@3.3.1",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.6.0"
   },
   "scripts": {
     "start": "node index.js",
-    "start-dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
